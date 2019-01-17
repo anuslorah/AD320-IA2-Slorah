@@ -1,0 +1,105 @@
+<!--A form element containing text entry fields for the following information:
+
+- Name (*Required)
+- Email (*Required)
+- Phone Number 
+- State of Residence 
+
+- There should be data validation enforcing required fields be filled in BEFORE submission. (Pro tip, Javascript is your friend here)
+- Fields not marked required can be submitted blank. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="javascript/validator.js"></script>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div class="grid-container">
+			<div class = "form">
+				<form action="php/form.php" method="GET">
+					<div>
+						<label>
+							Name:<br /><input type="text" name="name" required="required" placeholder="name" title="Name is required" tabindex="10" size="30" autofocus />
+						</label>
+					</div>
+					<div>
+						<label>
+							Email:<br />
+								<input type="text" name="email" required="required" placeholder="email" title="A valid email is required" tabindex="20" size="30" />
+						</label>	
+					</div>
+					<div>
+						<label>
+							Phone number:<br />
+							<input type="text" name="phonenumber" required="required" placeholder="email" title="A valid email is required" tabindex="20" size="30" />
+						</label>
+					</div>
+					<div>
+						<label>State:<br />
+							<select>
+						<option value="AL">Alabama</option>
+						<option value="AK">Alaska</option>
+						<option value="AZ">Arizona</option>
+						<option value="AR">Arkansas</option>
+						<option value="CA">California</option>
+						<option value="CO">Colorado</option>
+						<option value="CT">Connecticut</option>
+						<option value="DE">Delaware</option>
+						<option value="DC">District Of Columbia</option>
+						<option value="FL">Florida</option>
+						<option value="GA">Georgia</option>
+						<option value="HI">Hawaii</option>
+						<option value="ID">Idaho</option>
+						<option value="IL">Illinois</option>
+						<option value="IN">Indiana</option>
+						<option value="IA">Iowa</option>
+						<option value="KS">Kansas</option>
+						<option value="KY">Kentucky</option>
+						<option value="LA">Louisiana</option>
+						<option value="ME">Maine</option>
+						<option value="MD">Maryland</option>
+						<option value="MA">Massachusetts</option>
+						<option value="MI">Michigan</option>
+						<option value="MN">Minnesota</option>
+						<option value="MS">Mississippi</option>
+						<option value="MO">Missouri</option>
+						<option value="MT">Montana</option>
+						<option value="NE">Nebraska</option>
+						<option value="NV">Nevada</option>
+						<option value="NH">New Hampshire</option>
+						<option value="NJ">New Jersey</option>
+						<option value="NM">New Mexico</option>
+						<option value="NY">New York</option>
+						<option value="NC">North Carolina</option>
+						<option value="ND">North Dakota</option>
+						<option value="OH">Ohio</option>
+						<option value="OK">Oklahoma</option>
+						<option value="OR">Oregon</option>
+						<option value="PA">Pennsylvania</option>
+						<option value="RI">Rhode Island</option>
+						<option value="SC">South Carolina</option>
+						<option value="SD">South Dakota</option>
+						<option value="TN">Tennessee</option>
+						<option value="TX">Texas</option>
+						<option value="UT">Utah</option>
+						<option value="VT">Vermont</option>
+						<option value="VA">Virginia</option>
+						<option value="WA">Washington</option>
+						<option value="WV">West Virginia</option>
+						<option value="WI">Wisconsin</option>
+						<option value="WY">Wyoming</option>
+					</select>
+						</label>	
+					</div>
+					<div>
+						<input type="submit" value="submit" />
+					</div>
+				</form>
+			</div>
+			<div class = "response">
+				Response comes here
+				<?=$feedback?>
+			</div>
+		</div>	
+	</body>
+</html>
