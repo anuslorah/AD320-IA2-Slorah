@@ -1,42 +1,33 @@
-<!--A form element containing text entry fields for the following information:
-
-- Name (*Required)
-- Email (*Required)
-- Phone Number 
-- State of Residence 
-
-- There should be data validation enforcing required fields be filled in BEFORE submission. (Pro tip, Javascript is your friend here)
-- Fields not marked required can be submitted blank. -->
 <!DOCTYPE html>
 <html>
 	<head>
-		<script src="javascript/validator.js"></script>
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
 	<body>
 		<div class="grid-container">
 			<div class = "form">
-				<form action="php/form.php" method="GET">
+				<form action="php/form.php" method="GET">	
 					<div>
 						<label>
-							Name:<br /><input type="text" name="name" required="required" placeholder="name" title="Name is required" tabindex="10" size="30" autofocus />
+							Name:<br /><input type="text" name="name" required="required" placeholder="name" tabindex="10" size="30" autofocus />
 						</label>
 					</div>
 					<div>
 						<label>
 							Email:<br />
-								<input type="text" name="email" required="required" placeholder="email" title="A valid email is required" tabindex="20" size="30" />
+								<input type="text" name="email" required="required" placeholder="email" tabindex="20" size="30" />
 						</label>	
 					</div>
 					<div>
 						<label>
 							Phone number:<br />
-							<input type="text" name="phonenumber" required="required" placeholder="email" title="A valid email is required" tabindex="20" size="30" />
+							<input type="text" name="phonenumber" placeholder="phone number" tabindex="20" size="30" />
 						</label>
 					</div>
 					<div>
 						<label>State:<br />
-							<select>
+							<select name = "state">
+						<option value="default"></option>	
 						<option value="AL">Alabama</option>
 						<option value="AK">Alaska</option>
 						<option value="AZ">Arizona</option>
@@ -97,8 +88,6 @@
 				</form>
 			</div>
 			<div class = "response">
-				Response comes here
-				<?=$feedback?>
 			</div>
 		</div>	
 	</body>
