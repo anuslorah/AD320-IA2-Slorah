@@ -22,10 +22,22 @@ function spitOutData() {
 			margin-top: 40px;
 			background-color: aliceblue;
 			padding: 20px;'>";
-		echo "Name: " . $name . "<br/>" . "<br/>" 
-			. "Email: " . $email . "<br/>" . "<br/>"
-			. "Phone number: " . $phonenumber . "<br/>" . "<br/>"
-			. "State: " . $state;
+		
+		$name = "Name: " . $name . "<br/>" . "<br/>";
+		echo $name;
+		
+		$email = "Email: " . $email . "<br/>" . "<br/>";
+		echo $email;
+		
+		if (!empty($phonenumber)) {
+			$phonenumber = "Phone number: " . $phonenumber . "<br/>" . "<br/>";
+			echo $phonenumber;
+		}
+		
+		if ($state !== "default") {
+			$state = "State: " . $state;
+			echo $state;
+		}
 		echo "</div>";
 	}
 }	
